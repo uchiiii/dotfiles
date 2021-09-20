@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
@@ -96,6 +95,10 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+
+# my favorite libraries
+brew install starship
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
