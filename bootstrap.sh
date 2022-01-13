@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 cd "$(dirname "${BASH_SOURCE}")";
+echo "$("${BASH_SOURCE}")";
 
 git pull origin main;
 
