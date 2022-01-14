@@ -57,6 +57,12 @@ set tabstop=2
 set shiftwidth=2
 
 
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
@@ -102,6 +108,9 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'fatih/vim-go'
 Plugin 'preservim/nerdtree'
 Plugin 'JuliaEditorSupport/julia-vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'luochen1990/rainbow'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 
 " All of your Plugins must be added before the following line
@@ -111,6 +120,13 @@ colorscheme dracula
 
 filetype plugin indent on    " required
 
+" for julia-vim
 autocmd BufRead,BufNewFile *.jl :set filetype=julia
+let g:latex_to_unicode_suggestions = 1
 let g:latex_to_unicode_auto = 1
 
+"  for tcomment_vim
+vnoremap ? :'<,'>TComment<CR>
+
+" for rainbow
+let g:rainbow_active = 1
