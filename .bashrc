@@ -2,4 +2,3 @@
 
 set -o vi
 
-alias gpp='g++ -std=c++17 -DLOCAL -fsanitize=undefined,address'
