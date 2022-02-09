@@ -57,11 +57,11 @@ set tabstop=2
 set shiftwidth=2
 
 
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+" inoremap { {}<LEFT>
+" inoremap [ []<LEFT>
+" inoremap ( ()<LEFT>
+" inoremap " ""<LEFT>
+" inoremap ' ''<LEFT>
 
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
@@ -111,7 +111,9 @@ Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'cohama/lexima.vim'
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -300,3 +302,9 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" ########################  texvim  ################################
+" "let g:vimtex_view_general_viewer = 'okular'
+" "let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex' 
+" let maplocalleader = ","
+
