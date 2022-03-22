@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set formatoptions-=cro " disable continuation of comments
 set clipboard+=unnamed " for yank and paste
 let g:python3_host_prog="/Users/horiuchiryousuke/.pyenv/shims/python3"
 
@@ -57,12 +58,6 @@ set tabstop=2
 set shiftwidth=2
 
 
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
@@ -77,6 +72,7 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " ####################################################
+
 
 noremap <F5> :Autoformat<CR>
 " let g:formatdef_scalafmt = "'scalafmt --stdin'"
@@ -106,6 +102,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'fatih/vim-go'
+Plugin 'cohama/lexima.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'tomtom/tcomment_vim'
